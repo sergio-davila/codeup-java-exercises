@@ -72,21 +72,44 @@ public class ControlFlowExercises {
 //        }
 
 //        4.
-        System.out.println("Could you please input what grade you got as a number?");
-        double userGrade = sc.nextDouble();
-        if (userGrade >= 88 & userGrade <= 100) {
-            System.out.printf("Congrats, your %.0f got you an A!\n", userGrade);
-        } else if (userGrade >= 80 & userGrade <= 87) {
-            System.out.printf("Nice, your %.0f got you a B!\n", userGrade);
-        } else if (userGrade >= 67 & userGrade <= 79) {
-            System.out.printf("Okay you still passed, your %.0f got you a C.\n", userGrade);
-        } else if (userGrade >= 60 & userGrade <= 66) {
-            System.out.printf("Oof, your %.0f got you a D.\n", userGrade);
-        }else if (userGrade >= 0 & userGrade <= 59) {
-            System.out.printf("So your %.0f got you an F, you really need help lol.\n", userGrade);
-        } else {
-            System.out.println("It's impossible to get that grade, try again.");
+        boolean userAgrees = true;
+        while(userAgrees) {
+            System.out.println("Could you please input what grade you got as a number?");
+            double userGrade = sc.nextDouble();
+            if (userGrade >= 88 & userGrade <= 100) {
+                System.out.printf("Congrats, your %.0f got you an A!\n", userGrade);
+                //userAgrees = false;
+            } else if (userGrade >= 80 & userGrade <= 87) {
+                System.out.printf("Nice, your %.0f got you a B!\n", userGrade);
+                //userAgrees = false;
+            } else if (userGrade >= 67 & userGrade <= 79) {
+                System.out.printf("Okay you still passed, your %.0f got you a C.\n", userGrade);
+                //userAgrees = false;
+            } else if (userGrade >= 60 & userGrade <= 66) {
+                System.out.printf("Oof, your %.0f got you a D.\n", userGrade);
+                //userAgrees = false;
+            } else if (userGrade >= 0 & userGrade <= 59) {
+                System.out.printf("So your %.0f got you an F, you really need help lol.\n", userGrade);
+                //userAgrees = false;
+            } else {
+                System.out.println("It's impossible to get that grade, try again.");
+                continue;
+            }
+            System.out.println("Would you like to input another numerical grade so you can get a letter grade? Please answer with either a yes or no.");
+            boolean looper = true;
+            while (looper) {
+                String yesNo = sc.next();
+                if (yesNo.equalsIgnoreCase("yes")) {
+                    System.out.println("Ok here we go again!");
+                    looper = false;
+                } else if (yesNo.equalsIgnoreCase("no")) {
+                    System.out.println("Alright, thanks for participating!");
+                    looper = false;
+                    userAgrees = false;
+                } else {
+                    System.out.println("Try spelling that again lol.");
+                }
+            }
         }
-
     }
 }
