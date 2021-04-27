@@ -10,7 +10,8 @@ public class MethodsExercises {
 
 //    System.out.println("Enter a number between 1 and 10: ");
 //    boolean userInputCorrect = true;
-    getInteger(1, 12);
+//    getInteger(1, 12);
+        factorial();
 
     }
     // 1.
@@ -53,7 +54,47 @@ public class MethodsExercises {
     }
 
     // 3.
+    public static long factorial() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number between 1 and 10: ");
+        int userInput = sc.nextInt();
+        long factor = 1;
+        if (userInput > 1 && userInput < 10) {
+            for (int i = 1; i <= userInput; i++) {
+                factor *= i;
+                System.out.printf("%d! = ", i);
+//                System.out.printf("%d", i);
+                System.out.printf("%d\n", factor);
+            }
+        } else {
+            System.out.println("Try again.");
+            return factorial();
+        }
+        boolean userContinue = true;
+        while (userContinue) {
+            System.out.println("Do you wish to get factorial to another number? Please only answer with a yes or no.");
+            String yesOrNo = sc.next();
+            if(yesOrNo.equalsIgnoreCase("yes")) {
+                System.out.println("Okay, here we go again!");
+                userContinue = false;
+                return factorial();
+            } else if(yesOrNo.equalsIgnoreCase("no")) {
+                System.out.println("Thank you for participating.");
+                userContinue = false;
+            } else {
+                System.out.println("Try again.");
+            }
+        } return userInput;
+    }
 
+    // 4.
+//    public static int rollDice() {
+//        System.out.println("Please enter the number of sides for your preferred pair of dice.");
+//
+//    }
+//
+//
+//    int diceRoll = (int) (Math.random() * 6 - 1 + 1) + 1;
 
 
 }
