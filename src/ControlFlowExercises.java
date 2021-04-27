@@ -76,17 +76,41 @@ public class ControlFlowExercises {
         while(userAgrees) {
             System.out.println("Could you please input what grade you got as a number?");
             double userGrade = sc.nextDouble();
-            if (userGrade >= 88 & userGrade <= 100) {
+            if (userGrade >= 97 & userGrade <= 100) {
+                System.out.printf("Congrats, your %.0f got you an A+!\n", userGrade);
+                //userAgrees = false;
+            } else if (userGrade >= 93 & userGrade <= 96) {
                 System.out.printf("Congrats, your %.0f got you an A!\n", userGrade);
                 //userAgrees = false;
-            } else if (userGrade >= 80 & userGrade <= 87) {
+            } else if (userGrade >= 90 & userGrade <= 93) {
+                System.out.printf("Congrats, your %.0f got you an A-!\n", userGrade);
+                //userAgrees = false;
+            } else if (userGrade >= 87 & userGrade <= 89) {
+                System.out.printf("Nice, your %.0f got you a B+!\n", userGrade);
+                //userAgrees = false;
+            } else if (userGrade >= 83 & userGrade <= 86) {
                 System.out.printf("Nice, your %.0f got you a B!\n", userGrade);
                 //userAgrees = false;
-            } else if (userGrade >= 67 & userGrade <= 79) {
+            } else if (userGrade >= 80 & userGrade <= 82) {
+                System.out.printf("Nice, your %.0f got you a B-!\n", userGrade);
+                //userAgrees = false;
+            } else if (userGrade >= 77 & userGrade <= 79) {
+                System.out.printf("Okay you still passed, your %.0f got you a C+.\n", userGrade);
+                //userAgrees = false;
+            } else if (userGrade >= 73 & userGrade <= 76) {
                 System.out.printf("Okay you still passed, your %.0f got you a C.\n", userGrade);
                 //userAgrees = false;
-            } else if (userGrade >= 60 & userGrade <= 66) {
+            } else if (userGrade >= 70 & userGrade <= 72) {
+                System.out.printf("Okay you still passed, your %.0f got you a C-.\n", userGrade);
+                //userAgrees = false;
+            } else if (userGrade >= 67 & userGrade <= 69) {
+                System.out.printf("Oof, your %.0f got you a D+.\n", userGrade);
+                //userAgrees = false;
+            } else if (userGrade >= 63 & userGrade <= 66) {
                 System.out.printf("Oof, your %.0f got you a D.\n", userGrade);
+                //userAgrees = false;
+            } else if (userGrade >= 60 & userGrade <= 62) {
+                System.out.printf("Oof, your %.0f got you a D-.\n", userGrade);
                 //userAgrees = false;
             } else if (userGrade >= 0 & userGrade <= 59) {
                 System.out.printf("So your %.0f got you an F, you really need help lol.\n", userGrade);
@@ -107,9 +131,11 @@ public class ControlFlowExercises {
                     looper = false;
                     userAgrees = false;
                 } else {
-                    System.out.println("Try spelling that again lol.");
+                    System.out.println("Try spelling yes or no again lol.");
                 }
             }
         }
+
+
     }
 }
