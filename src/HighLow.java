@@ -21,14 +21,15 @@ public class HighLow {
 
         boolean highLow = true;
         int guessAttempts = 1;
+
         while (highLow) {
             if (userNum < randomNum && guessAttempts <= 10) {
-                System.out.printf("Guess #%d\n", guessAttempts);
+                System.out.printf("Guess #%d \n", guessAttempts);
                 System.out.println("Go higher! Input another number!");
                 guessAttempts += 1;
                 userNum = sc.nextDouble();
             } else if (userNum > randomNum && guessAttempts <= 10) {
-                System.out.printf("Guess #%d\n", guessAttempts);
+                System.out.printf("Guess #%d \n", guessAttempts);
                 System.out.println("Go lower! Input another number!");
                 guessAttempts += 1;
                 userNum = sc.nextDouble();
