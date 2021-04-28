@@ -11,9 +11,11 @@ public class MethodsExercises {
 //    System.out.println("Enter a number between 1 and 10: ");
 //    boolean userInputCorrect = true;
 //    getInteger(1, 12);
-        factorial();
+//        factorial();
+        rollDice();
 
     }
+
     // 1.
     public static void Addition(int num1, int num2) {
         int result = num1 + num2;
@@ -74,27 +76,51 @@ public class MethodsExercises {
         while (userContinue) {
             System.out.println("Do you wish to get factorial to another number? Please only answer with a yes or no.");
             String yesOrNo = sc.next();
-            if(yesOrNo.equalsIgnoreCase("yes")) {
+            if (yesOrNo.equalsIgnoreCase("yes")) {
                 System.out.println("Okay, here we go again!");
                 userContinue = false;
                 return factorial();
-            } else if(yesOrNo.equalsIgnoreCase("no")) {
+            } else if (yesOrNo.equalsIgnoreCase("no")) {
                 System.out.println("Thank you for participating.");
                 userContinue = false;
             } else {
                 System.out.println("Try again.");
             }
-        } return userInput;
+        }
+        return userInput;
     }
 
     // 4.
-//    public static int rollDice() {
-//        System.out.println("Please enter the number of sides for your preferred pair of dice.");
-//
-//    }
-//
-//
-//    int diceRoll = (int) (Math.random() * 6 - 1 + 1) + 1;
+    public static void rollDice() {
+        System.out.println("Please enter the number of sides for your preferred pair of dice. Include the total of sides for the two dice.");
+        Scanner sc = new Scanner(System.in);
+        double userDice = sc.nextDouble();
+        int diceRoll = (int) (Math.random() * (userDice * 2)) + 2;
+        if (diceRoll > (userDice * 2) / 2) {
+            System.out.println("Nice! Here's your roll: " + diceRoll);
+        } else {
+            System.out.println("Oof, here's your roll: " + diceRoll);
+        }
+
+        boolean userContinue = true;
+        while (userContinue) {
+            System.out.println("Want to roll some dice again? Answer yes or no only please.");
+            String userAgreement = sc.next();
+            if (userAgreement.equalsIgnoreCase("yes")) {
+                System.out.println("Okay here we go again!");
+                userContinue = false;
+                rollDice();
+            } else if (userAgreement.equalsIgnoreCase("no")) {
+                System.out.println("Thank you for participating!");
+                userContinue = false;
+            } else {
+                System.out.println("Try answering correctly again.");
+            }
+        }
+    }
+
+    // 5.
+
 
 
 }
