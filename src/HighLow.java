@@ -10,7 +10,7 @@ public class HighLow {
     public static void numGuesser() {
         int randomNum = (int) (Math.random() * 101);
         System.out.println("My random generator has generated a number between 1 and 100");
-        System.out.println(randomNum);
+        //System.out.println(randomNum);
         System.out.println("Please guess a number between 1 and 100, keep in mind you only have 10 guesses >:)");
         Scanner sc = new Scanner(System.in);
         double userNum = sc.nextDouble();
@@ -33,7 +33,7 @@ public class HighLow {
                 guessAttempts += 1;
                 userNum = sc.nextDouble();
             } else if (userNum == randomNum) {
-                System.out.println("Correcto guesso!");
+                System.out.println("Correcto guesso! CONGRATURATIONS");
                 highLow = false;
             }
             if (guessAttempts == 11) {
