@@ -2,9 +2,14 @@ public class Person {
 
     private String personName;
 
+    public Person(String name) {
+        this.personName = name;
+    }
+
+
     public String getName(){
 //TODO: return the person's name
-        return personName = "Unknown";
+        return personName;
     }
 
     public String setName(String name){
@@ -27,6 +32,31 @@ public class Person {
 //        Person person2 = new Person("John");
 //        System.out.println(person1.getName().equals(person2.getName()));
 //        System.out.println(person1 == person2);
+
+        Person Iffy = new Person("Iffy");
+        System.out.println("Iffy.personName = " + Iffy.personName);
+        System.out.println("Iffy.getName() = " + Iffy.getName());
+        System.out.println("Iffy.sayHello() = " + Iffy.sayHello());
+        Iffy.setName("Irfa");
+        System.out.println("Iffy.personName = " + Iffy.personName);
+
+//        Person person1 = new Person("John");
+//        Person person2 = new Person("John");
+//        System.out.println(person1.getName().equals(person2.getName()));
+//        System.out.println(person1 == person2);
+
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1 == person2);
+
+        Person person1 = new Person("John");
+        Person person2 = person1;
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
+        person2.setName("Jane");
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
+
 
     }
 }
