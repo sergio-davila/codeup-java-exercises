@@ -198,7 +198,6 @@ public class ArraysLec {
 
         System.out.println(Arrays.deepToString(matrix));
 
-
     }
 
 }
