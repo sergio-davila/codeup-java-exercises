@@ -6,6 +6,6 @@ public class ArraysExercise {
         int[] numbers = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(numbers));
 
-        String[] Person = {"Iffy", "Vanessa", "Nick"};
+        String[] persons = new String[3];
     }
 }
