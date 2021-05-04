@@ -9,6 +9,10 @@ public class Person {
         return lastName + ", " + firstName + " has joined the chat!";
     }
 
+    public String sayHello() {
+        return "Hello, " + this.firstName + " " + this.lastName + ".";
+    }
+
     public Person() {
         this.firstName = "Unknown";
         this.lastName = "Unknown";

@@ -21,5 +21,9 @@ public class Movie {
         return name = movieName;
     }
 
+    public String setCategory(String categoryName) {
+        return category = categoryName;
+    }
+
 
 }
