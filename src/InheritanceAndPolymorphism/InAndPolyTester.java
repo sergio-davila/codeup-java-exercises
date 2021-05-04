@@ -38,10 +38,13 @@ public class InAndPolyTester {
         fastJet.start();
         System.out.println("ZOOMIN in a jet at " + fastJet.getMaxSpeed() + "mph with " + bus.getNumberOfOccupants() + " occupants inside!");
         System.out.println();
-        Vehicle fasterBus = spawnVehicle("bus",120);
+//        Vehicle fasterBus = spawnVehicle("bus",120);
+        Bus fasterBus = (Bus)spawnVehicle("bus",120);
+        fasterBus.honkHorn();
         fasterBus.start();
 
         Vehicle slowerJet = spawnVehicle("jet", 700);
+        slowerJet.setNumberOfOccupants(2);
         slowerJet.start();
     }
 
