@@ -13,6 +13,10 @@ public class Movie {
         return name;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
     public String setName(String movieName){
         return name = movieName;
     }
