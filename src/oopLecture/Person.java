@@ -18,6 +18,11 @@ public class Person {
         this.firstName = name;
     }
 
+    public Person(String name, String last) {
+        this.firstName = name;
+        this.lastName = last;
+    }
+
     public static long worldPop = 7_860_000_000L;
 
     public static void main(String[] args){
