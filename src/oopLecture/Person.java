@@ -9,6 +9,15 @@ public class Person {
         return lastName + ", " + firstName + " has joined the chat!";
     }
 
+    public Person() {
+        this.firstName = "Unknown";
+        this.lastName = "Unknown";
+    }
+
+    public Person(String name) {
+        this.firstName = name;
+    }
+
     public static long worldPop = 7_860_000_000L;
 
     public static void main(String[] args){

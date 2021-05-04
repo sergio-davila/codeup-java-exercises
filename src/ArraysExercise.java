@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.Scanner;
+import oopLecture.Person;
 
 public class ArraysExercise {
 
@@ -7,5 +9,13 @@ public class ArraysExercise {
         System.out.println(Arrays.toString(numbers));
 
         String[] persons = new String[3];
+
+        Person ken = new Person("Kenneth");
+        Person vanessa = new Person();
+        Person douglas = new Person();
+        Scanner sc = new Scanner(System.in);
+
+
+
     }
 }
