@@ -10,11 +10,11 @@ public class MoviesApplication {
         Movie[] movies = MoviesArray.findAll();
 
 
-
         boolean looper = true;
         while (looper) {
             System.out.println("Time to see a list of movies!");
-            System.out.println("Please input one of the following: 0 to not display anything.");
+            System.out.println("Please input one of the following: ");
+            System.out.println("0 to not display anything.");
             System.out.println("1 to view all movies.");
             System.out.println("2 to view movies in the drama category.");
             System.out.println("3 to view movies in the musical category.");
