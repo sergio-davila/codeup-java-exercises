@@ -10,6 +10,7 @@ public class ShapesTest {
         Square box2 = new Square(5);
         System.out.println("box2.getPerimeter() = " + box2.getPerimeter());
         System.out.println("box2.getArea() = " + box2.getArea());
+        // tested the different methods
 
     }
 }
