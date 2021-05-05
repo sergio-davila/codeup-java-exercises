@@ -57,15 +57,18 @@ public class MoviesApplication {
 
             System.out.println("Would you like to see a different movie list? Answer with yes or no please.");
             boolean looper2 = true;
-            String YorN = sc.next();
             while (looper2) {
+                String YorN = sc.next();
                 if (YorN.equalsIgnoreCase("yes")) {
                     System.out.println("MORE MOVIES");
+                    looper2 = false;
                 } else if (YorN.equalsIgnoreCase("no")) {
                     System.out.println("NO MORE MOVIES");
+                    looper2 = false;
                     looper = false;
                 } else {
                     System.out.println("Try again.");
+                    looper2 = true;
                 }
             }
         }
