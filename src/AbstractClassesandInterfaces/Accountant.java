@@ -11,5 +11,19 @@ public class Accountant extends Employee{
         return "TPS Reports drafted!";
     }
 
+    public String morningMeeting() {
+        return "Accountants have meetings beginning at 8:15Am and run until 8:45AM.";
+    }
+
+    @Override
+    public String lunchTime() {
+        return "Accountants take their lunch when they want at their desk.";
+    }
+
+    @Override
+    public int dailyPay() {
+        return 500;
+    }
+
 
 }

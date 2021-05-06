@@ -1,6 +1,6 @@
 package AbstractClassesandInterfaces;
 
-abstract class Employee {
+abstract class Employee implements DailyWork{
     protected String name;
     protected String department;
     protected int id;
@@ -11,15 +11,15 @@ abstract class Employee {
         this.id = id;
     }
 
-    public abstract String work(); // Setting up a blank method -  our class that inherit will fill in the deets!
+    // public abstract String work(); // Setting up a blank method -  our class that inherit will fill in the deets!
 
 
 
-    public Employee() {
-        this.name = "Unknown";
-        this.department = "Unknown";
-        this.id = 0;
-    }
+//    public Employee() {
+//        this.name = "Unknown";
+//        this.department = "Unknown";
+//        this.id = 0;
+//    }
 
     public String getName() {
         return name;
