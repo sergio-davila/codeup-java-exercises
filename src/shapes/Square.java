@@ -9,11 +9,11 @@ public class Square extends Rectangle{
         this.side = side;
     }
 
-    public int getArea() {
-        return side * side; // + 1; used + 1 to check if it was using this method
-    }
-
-    public int getPerimeter() {
-        return 4 * side; // + 1; used + 1 to check if it was using this method
-    }
+//    public int getArea() {
+//        return side * side; // + 1; used + 1 to check if it was using this method
+//    }
+//
+//    public int getPerimeter() {
+//        return 4 * side; // + 1; used + 1 to check if it was using this method
+//    }
 }
