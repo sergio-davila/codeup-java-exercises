@@ -46,13 +46,15 @@ public class GradesApplication{
             System.out.println("What student would you like to see more information on? Please be precise.");
             String userInput = sc.next();
 //                System.out.println(key);
-                if (userInput != null && students.containsKey(userInput)) {
+            if (userInput != null && students.containsKey(userInput)) {
                     System.out.println("Name: " + students.get(userInput).getName() + " - Github username: " + userInput);
                     System.out.println("All grades for " + userInput + ": " + students.get(userInput).getGrades());
                     System.out.printf("Current Average: %.2f\n", students.get(userInput).getGradeAverage());
-                } else {
+            }
+
+            else {
                     System.out.println("Sorry, no student found with the Github username of " + userInput);
-                }
+            }
 
 
             boolean looper2 = true;
@@ -63,19 +65,21 @@ public class GradesApplication{
                 System.out.println("2 - View all grades for all students");
                 System.out.println("3 - View overall class average");
                 System.out.println("4 - View a csv report of all the students");
-                int yOrN = sc.nextInt();
-                if (yOrN == 1) {
 
+                int yOrN = sc.nextInt();
+
+                if (yOrN == 1) {
 //                    System.out.println("What student would you like to see more information on? Please be precise.");
                     looper2 = false;
+                }
 
-                } else if (yOrN == 2) {
-
+                else if (yOrN == 2) {
                     for (String key : students.keySet()) {
                         System.out.println(students.get(key).getName() + "'s grades: " + students.get(key).getGrades());
                     }
+                }
 
-                } else if(yOrN == 3) {
+                else if(yOrN == 3) {
                     double total = 0;
                     for (String key : students.keySet()) {
                         total += students.get(key).getGradeAverage();
@@ -83,18 +87,25 @@ public class GradesApplication{
                     double classSize = students.size();
                     double totalAvg = total / classSize;
                     System.out.printf("The total class average is: %.2f\n", totalAvg);
-                } else if (yOrN == 4) {
+                }
+
+                else if (yOrN == 4) {
                     for (String key : students.keySet()) {
                         System.out.printf(students.get(key).getName() + "," + key + ",%.2f\n", students.get(key).getGradeAverage());
                     }
-                } else if (yOrN == 0) {
+                }
+
+                else if (yOrN == 0) {
                         System.out.println("No more students for you!");
                         looper2 = false;
                         looper = false;
-                    } else {
+                    }
+
+                else {
                         System.out.println("Try again.");
                     }
                 }
+
             }
 
     }
