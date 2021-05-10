@@ -5,8 +5,9 @@ public class Input {
 
     Scanner sc = new Scanner(System.in);
 
-    public String getString() {
-        System.out.println("Please input any random string please!");
+    public String getString(String prompt) {
+//        System.out.println("Please input any random string please!");
+        System.out.println(prompt);
         return sc.next();
     }
 
@@ -52,30 +53,36 @@ public class Input {
 //        return userInput;
 //    }
 
-    public int getInt() {
-        System.out.println("Please input any random integer please!");
-        String userInput = sc.next();
+    public void getInt() {
+        try {
+        String userInput = getString("Please input any random integer please!");
         System.out.println(Integer.valueOf(userInput));
-        return Integer.valueOf(userInput);
+        System.out.println(Integer.valueOf(userInput));
+        } catch (NumberFormatException e) {
+            e.printStackTrace(System.out);
+            System.out.println("e.getMessage() = " + e.getMessage());
+            System.out.println("THAT'S A STRING YA FOOL!");
+        }
     }
 
-    public void getDouble() throws Exception {
+    public double getDouble() {
         try {
             System.out.println("Please input any random number please!");
             String userInput = sc.next();
             System.out.println(Double.valueOf(userInput));
-//            return Double.valueOf(userInput);
+            return Double.valueOf(userInput);
         } catch (NumberFormatException e) {
             e.printStackTrace(System.out);
+            System.out.println("e.getMessage() = " + e.getMessage());
             System.out.println("THAT'S A STRING YA FOOL!");
-
-//            return e.getMessage();
+            return 0;
         }
     }
 
     public static void main(String[] args) throws Exception {
         Input input = new Input();
         input.getDouble();
+        input.getInt();
     }
 
 }
