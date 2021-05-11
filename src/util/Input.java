@@ -57,7 +57,6 @@ public class Input {
         try {
         String userInput = getString("Please input any random integer please!");
         System.out.println(Integer.valueOf(userInput));
-        System.out.println(Integer.valueOf(userInput));
         } catch (NumberFormatException e) {
             e.printStackTrace(System.out);
             System.out.println("e.getMessage() = " + e.getMessage());
