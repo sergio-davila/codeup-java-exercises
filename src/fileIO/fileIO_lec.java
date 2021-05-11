@@ -33,7 +33,7 @@ public class fileIO_lec {
 
         System.out.println("Files.exists(sameDirectoryPath) = " + Files.exists(sameDirectoryPath));
 
-//        printPoem(filePathtoPoem);
+        printPoem(filePathtoPoem);
 
         //Alright! So, we've built a Path - we used the Path with Files.exist - now though, how do we get into the creation of new files/directories?
         String directory = "./src/fileIO/data"; //~~ relative path to where we want our directory to go
@@ -81,6 +81,8 @@ public class fileIO_lec {
 
         groceryList = Files.readAllLines(groceriesTxtPath);
 
+        System.out.println();
+
         for (int i = 0; i < groceryList.size(); i += 1) {
             System.out.println((i + 1) + ": " + groceryList.get(i));
         }
@@ -99,7 +101,13 @@ public class fileIO_lec {
         }
         Files.write(groceriesTxtPath, newList);
 
+        groceryList = Files.readAllLines(groceriesTxtPath);
 
+        System.out.println();
+
+        for (int i = 0; i < groceryList.size(); i += 1) {
+            System.out.println((i + 1) + ": " + groceryList.get(i));
+        }
 
 
     }
