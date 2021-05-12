@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class GradesApplication{
 
 
+
     public static void main(String[] args) {
         Map<String, Student> students = new HashMap<>();
         Student Vanessa = new Student("Vanessa");
