@@ -1,3 +1,5 @@
+package JavaAdListerPaste;
+
 public class ServletScratch4 {
 //    import java.io.Serializable;
 //

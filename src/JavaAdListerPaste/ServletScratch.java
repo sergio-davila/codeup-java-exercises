@@ -1,3 +1,5 @@
+package JavaAdListerPaste;
+
 public class ServletScratch {
 
 //    import javax.servlet.annotation.WebServlet;

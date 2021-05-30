@@ -1,3 +1,5 @@
+package JavaAdListerPaste;
+
 public class ServletScratch3 {
     //guess.jsp below
 //    <%@ page contentType="text/html;charset=UTF-8" language="java" %>

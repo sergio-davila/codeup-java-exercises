@@ -1,3 +1,5 @@
+package JavaAdListerPaste;
+
 public class ServletScratch2 {
 //    import javax.servlet.annotation.WebServlet;
 //import javax.servlet.http.HttpServlet;
