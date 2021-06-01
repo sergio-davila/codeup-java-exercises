@@ -1,6 +1,17 @@
 package JavaAdListerPaste;
 
 public class ServletScratch7 {
+//    public class DaoFactory {
+//    private static Ads adsDao;
+//
+//    public static Ads getAdsDao() {
+//        if (adsDao == null) {
+//            adsDao = new ListAdsDao();
+//        }
+//        return adsDao;
+//    }
+//}
+
 //import javax.servlet.ServletException;
 //import javax.servlet.annotation.WebServlet;
 //import javax.servlet.http.HttpServlet;
